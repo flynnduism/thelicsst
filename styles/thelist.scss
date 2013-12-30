@@ -1,0 +1,231 @@
+/* i really want this to be global */
+
+// SASS Variables
+
+    // Colors
+    $navy: #2c3e50;
+    $blue: #2980b9;
+    $red: #e74c3c;
+    $green: #d35400;
+
+    $dark: #7f8c8d;
+    $grey2: #95a5a6;
+    $grey1: #bdc3c7;
+    $light: #ecf0f1;
+
+
+/* Base Styles
+======================================== */
+    body {
+        background: lighten($light, 2.5%);
+        color: $grey2;
+        margin: 0;
+        font-size: 16px;
+        font-family: "Lato", arial, sans-serif !important;
+
+        a {
+            text-decoration: none;
+            color: $grey2;
+
+            -ms-word-break: break-all;
+                 word-break: break-all;
+
+                 /* Non standard for webkit */
+                 word-break: break-word;
+
+            -webkit-hyphens: auto;
+               -moz-hyphens: auto;
+                    hyphens: auto;
+        }
+
+        ul {
+            /* gridify the list */
+            width: 70%;
+            max-width: 720px;
+            margin: 2em auto;
+            padding-bottom: 2em;
+
+            ul {
+                width: 100%;
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
+    }
+
+
+/* Header Styles
+======================================== */
+    h1, h2 {
+        //background-color: $dark;
+        color: white;
+        padding: 1em 2.5% 1em;
+        max-width: 685px;
+        margin: 0 auto;
+    }
+
+    h1 {
+        padding-bottom: 0;
+        color: $red;
+    }
+
+    h2 {
+        text-transform: uppercase;
+        font-size: 0.725em;
+        font-weight: bold;
+        letter-spacing: 0.08em;
+        padding-bottom: 1.5em;
+        color: $grey2;
+    }
+
+
+/* Main Contents
+======================================== */
+    ul {
+        margin: 2em 0;
+        padding: 0;
+        background: lighten($light, 1%);
+
+        li {
+            line-height: 1.4;
+            padding: 0;
+            margin: 0;
+            position: relative;
+            list-style: none;
+            text-transform: uppercase;
+            font-size: 0.5em;
+            letter-spacing: 0.08em;
+            font-weight: bold;
+
+            /* the date subheadings */
+            a {
+                color: $grey2;
+                border-bottom: none;
+                display: inline-block;
+                padding-left: 2.5%;
+
+                b:first-child {
+                    padding: 2.2em 0 1em;
+                    font-size: 11px;
+                    display: block;
+                }
+            }
+
+            /* sub-list - the gigs */
+            ul {
+                margin: 0;
+                padding: 0;
+
+                li {
+                    text-transform: none;
+                    font-size: 1em;
+                    letter-spacing: 0;
+                    padding: 0.5em 2.5% 1em 2.5%;
+                    margin: 0;
+                    font-weight: normal;
+                    font-size: 1.5em;
+                    color: $light;
+                    position: relative;
+
+                    /* venue info */
+                    b {
+                        font-size: 0.75em;
+                        float: right;
+                        margin-right: -1em;
+                        line-height: 2;
+
+                        a {
+                            border: none;
+                            font-weight: normal;
+                            color: $grey1;
+                            padding: 0;
+                        }
+                    }
+
+                    /* band link styles */
+                    a {
+                        text-decoration: none;
+                        color: lighten($navy, 2%);
+                        opacity: 0.825;
+                        font-weight: bold;
+                        font-size: 1.667em;
+                        padding: 0;
+                        margin: 0 0.425em 0 0;
+                        transition: all 0.4s ease-in-out;
+                        border-bottom: 1px dotted $light;
+
+                        &:hover {
+                            color: $blue !important;
+                            border-bottom: 1px dotted $blue;
+                        }
+
+                        &:visited {
+                            color: $green;
+                        }
+
+                        &:nth-child(2) {
+                            color: #222;
+                            opacity: 1;
+                        }
+
+                        &:last-child {
+                            margin-right: 1em;
+
+                            &:after {
+                                visibility: hidden;
+                                display: block;
+                                font-size: 0;
+                                content: " ";
+                                clear: both;
+                                height: 0;
+                            }
+                        }
+                    }
+
+                } //li
+
+                li:hover {
+                    background: darken($light, 2%);
+                    color: $grey2;
+                    transition: all 0.4s ease-in-out;
+
+                    b a {
+                        color: $grey2;
+
+                        &:hover {
+                            color: lighten($navy, 33.3%);
+                        }
+                    }
+                }
+
+            } //ul
+        } //li
+    } //ul
+
+/* Bits
+======================================== */
+
+    /* Back Link */
+    .backlink {
+        position: fixed;
+        top: 1.2em;
+        left:50%;
+        margin-left: -432px;
+
+        a {
+            color: $blue;
+            font-weight: bold;
+            font-size: 2.5em;
+            display: inline-block;
+            line-height: 1;
+            padding: 0.25em 0.667em 0.5em;
+            text-decoration: none;
+            text-align: center;
+            opacity: 0.333;
+            transition: all 0.4s ease-in-out;
+
+            &:hover {
+                background: white;
+            }
+        }
+    }
