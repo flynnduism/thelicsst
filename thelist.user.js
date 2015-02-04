@@ -6,7 +6,7 @@
 // @copyright 2013+, flynnduism.com
 // @description   Changes the default css for foopee.com
 // @include       http://www.foopee.com/punk/the-list/by*
-// @resource      myCustomCss http://userstyles.org/styles/96411/foopee-the-list.css
+// @resource      myCustomCss https://raw.githubusercontent.com/flynnduism/thelicsst/master/styles/thelist.css
 // @grant         GM_addStyle
 // @grant         GM_getResourceText
 // ==/UserScript==
